@@ -35,9 +35,6 @@ def ssearch(interval, tol):
 
     while (np.abs(df_x) > tol) and (np.abs(b - a) > tol):
 
-        if np.abs(df_x - df_old) < 1e-12:
-            break
-
         x_new = x - df_x * (x - x_old) / (df_x - df_old)
 
         if x_new < x:
